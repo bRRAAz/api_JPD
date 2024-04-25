@@ -1,5 +1,6 @@
 package com.ong.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
@@ -23,6 +24,7 @@ public class Usuario {
     private boolean setorMember;
     @ManyToOne
     @JoinColumn(name = "setor_id")
+    @JsonIgnoreProperties({"leader"})
     private Setor setor;
     private boolean coordinator;
 

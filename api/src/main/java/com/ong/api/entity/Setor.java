@@ -12,6 +12,9 @@ public class Setor {
     @JoinColumn(name = "usuario_id")
     private Usuario leader;
 
+    public Setor(){
+
+    }
     public Setor(String descricao){
         this.descricao = descricao;
     }

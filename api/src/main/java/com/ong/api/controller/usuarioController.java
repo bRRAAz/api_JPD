@@ -1,5 +1,6 @@
 package com.ong.api.controller;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.ong.api.CryptPassword;
 import com.ong.api.entity.Usuario;
 import com.ong.api.repository.UsuarioRepository;
@@ -19,6 +20,7 @@ public class usuarioController {
 
     @GetMapping
     public List<Usuario> usuariolist(){
+
         return repository.findAll();
     }
     @PostMapping
