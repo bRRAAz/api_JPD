@@ -24,8 +24,8 @@ Para executar o projeto, siga os passos abaixo:
 https://www.jetbrains.com/pt-br/idea/download/?section=windows
 
 3. Clone o repositório:
-
 no terminal coloque na pasta que deseja receber a API e coloque.
+
 git clone https://github.com/bRRAAz/api_JPD.git
 
 5. Com o docker instalado na sua maquina entre no seu terminal e coloque o seguinte comando:
