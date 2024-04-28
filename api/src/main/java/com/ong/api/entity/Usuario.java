@@ -27,6 +27,8 @@ public class Usuario {
     @JsonIgnoreProperties({"leader"})
     private Setor setor;
     private boolean coordinator;
+    private int late;
+    private int miss;
 
     public Usuario(Long id, String name, String socialName, String pronome, String dateBirth, String email, String tel, String emergencyTel, String entryDate, Equipe team, int numberOfAction, boolean setorMember, Setor setor, boolean coordinator) {
         this.id = id;
@@ -51,6 +53,22 @@ public class Usuario {
     public Usuario(String email, String password){
         this.email = email;
         this.password = password;
+    }
+
+    public int getLate() {
+        return late;
+    }
+
+    public void setLate(int late) {
+        this.late = late;
+    }
+
+    public int getMiss() {
+        return miss;
+    }
+
+    public void setMiss(int miss) {
+        this.miss = miss;
     }
 
     public Long getId() {
