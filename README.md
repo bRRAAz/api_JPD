@@ -23,18 +23,18 @@ Para executar o projeto, siga os passos abaixo:
 
 https://www.jetbrains.com/pt-br/idea/download/?section=windows
 
-3. Clone o repositório:
+2. Clone o repositório:
 no terminal coloque na pasta que deseja receber a API e coloque.
 
 git clone https://github.com/bRRAAz/api_JPD.git
 
-5. Com o docker instalado na sua maquina entre no seu terminal e coloque o seguinte comando:
+3. Com o docker instalado na sua maquina entre no seu terminal e coloque o seguinte comando:
 
 
 docker run -p PORTA_DE_SAIDA:5432 -e POSTGRES_PASSWORD=SENHA_DO_BANCO -v  DIRETORIO_DA_PASTA_DO_BANCO -d postgres
 
 
-6. Abra sua IDE na pasta clonada e rode o arquivo ApiApplication.java
+4. Abra sua IDE na pasta clonada e rode o arquivo ApiApplication.java
 
 
 ## Endpoints da API
