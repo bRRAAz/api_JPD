@@ -39,7 +39,7 @@ docker run -p PORTA_DE_SAIDA:5432 -e POSTGRES_PASSWORD=SENHA_DO_BANCO -v  DIRETO
 
 ## Endpoints da API
 
-- `GET /api/usuarioo`: Retorna uma lista de todos os usuários.
+- `GET /api/usuario`: Retorna uma lista de todos os usuários.
 - `POST /api/usuario`: Cria um novo usuário.
 - `POST /api/usuario/signin`: Logar com o usuário.
 - `GET /api/setor`: Retorna uma lista de todos os setores.
