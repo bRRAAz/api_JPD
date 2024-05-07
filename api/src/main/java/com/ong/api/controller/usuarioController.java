@@ -1,7 +1,9 @@
 package com.ong.api.controller;
 
 import com.ong.api.CryptPassword;
+import com.ong.api.DTOs.UsuarioDTO;
 import com.ong.api.entity.Usuario;
+import com.ong.api.mapper.UsuarioMapper;
 import com.ong.api.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,9 +20,9 @@ public class usuarioController {
 
 
     @GetMapping
-    public List<Usuario> usuariolist(){
-
-        return repository.findAll();
+    public List<UsuarioDTO> usuariolist(){
+        List<UsuarioDTO> userDTO = repository.findAll().stream().map(UsuarioMapper::toUsuarioDTO).toList();
+        return userDTO;
     }
     @PostMapping
     public void signUp(@RequestBody Usuario usuario){

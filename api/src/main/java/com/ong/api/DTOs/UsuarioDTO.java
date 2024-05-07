@@ -1,0 +1,113 @@
+package com.ong.api.DTOs;
+
+public class UsuarioDTO {
+    private long id;
+    private String name;
+    private String socialName;
+    private String pronome;
+    private String dateBirth;
+    private String email;
+    private String tel;
+    private int numberOfAction;
+    private boolean setorMember;
+    private boolean coordinator;
+    private int late;
+    private int miss;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSocialName() {
+        return socialName;
+    }
+
+    public void setSocialName(String socialName) {
+        this.socialName = socialName;
+    }
+
+    public String getPronome() {
+        return pronome;
+    }
+
+    public void setPronome(String pronome) {
+        this.pronome = pronome;
+    }
+
+    public String getDateBirth() {
+        return dateBirth;
+    }
+
+    public void setDateBirth(String dateBirth) {
+        this.dateBirth = dateBirth;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+
+    public int getNumberOfAction() {
+        return numberOfAction;
+    }
+
+    public void setNumberOfAction(int numberOfAction) {
+        this.numberOfAction = numberOfAction;
+    }
+
+    public boolean getSetorMember() {
+        return setorMember;
+    }
+
+    public void setSetorMember(boolean setorMember) {
+        this.setorMember = setorMember;
+    }
+
+    public boolean getCoordinator() {
+        return coordinator;
+    }
+
+    public void setCoordinator(boolean coordinator) {
+        this.coordinator = coordinator;
+    }
+
+    public int getLate() {
+        return late;
+    }
+
+    public void setLate(int late) {
+        this.late = late;
+    }
+
+    public int getMiss() {
+        return miss;
+    }
+
+    public void setMiss(int miss) {
+        this.miss = miss;
+    }
+}

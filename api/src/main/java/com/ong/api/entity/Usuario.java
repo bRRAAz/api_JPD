@@ -158,7 +158,7 @@ public class Usuario {
         this.numberOfAction = numberOfAction;
     }
 
-    public boolean isSetorMember() {
+    public boolean getSetorMember() {
         return setorMember;
     }
 
@@ -174,7 +174,7 @@ public class Usuario {
         this.setor = setor;
     }
 
-    public boolean isCoordinator() {
+    public boolean getCoordinator() {
         return coordinator;
     }
 
