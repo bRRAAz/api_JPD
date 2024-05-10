@@ -55,6 +55,18 @@ public class Usuario {
         this.password = password;
     }
 
+    public Usuario(String email, String password, String name, String pronome, String dateBirth, String emergencyTel, String entryDate, String socialName, String tel) {
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.pronome = pronome;
+        this.dateBirth = dateBirth;
+        this.emergencyTel = emergencyTel;
+        this.entryDate = entryDate;
+        this.socialName = socialName;
+        this.tel = tel;
+    }
+
     public int getLate() {
         return late;
     }

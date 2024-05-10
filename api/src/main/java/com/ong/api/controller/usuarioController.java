@@ -28,7 +28,7 @@ public class usuarioController {
     public void signUp(@RequestBody Usuario usuario){
         CryptPassword crypt = new CryptPassword();
         String hashedPassword = crypt.CryptPassword(usuario.getPassword());
-        Usuario user = new Usuario(usuario.getEmail(),hashedPassword);
+        Usuario user = new Usuario(usuario.getEmail(),hashedPassword,usuario.getName(),usuario.getPronome(),usuario.getDateBirth(),usuario.getEmergencyTel(),usuario.getEntryDate(),usuario.getSocialName(),usuario.getTel());
 
         repository.save(user);
     }
