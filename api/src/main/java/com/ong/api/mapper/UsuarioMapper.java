@@ -19,6 +19,12 @@ public class UsuarioMapper {
         userDTO.setSetorMember(user.getSetorMember());
         userDTO.setSocialName(user.getSocialName());
         userDTO.setTel(user.getTel());
+        userDTO.setSetor(user.getSetor());
+        userDTO.setTeam(user.getTeam());
+        userDTO.setEntryDate(user.getEntryDate());
+        userDTO.setEmergencyTel(user.getEmergencyTel());
+        userDTO.setGender(user.getGender());
+        userDTO.setCoordinatorSetor(user.getCoordinatorSetor());
         return userDTO;
     }
     public static Usuario toUsuario(UsuarioDTO userDTO){
@@ -35,6 +41,12 @@ public class UsuarioMapper {
         user.setSetorMember(userDTO.getSetorMember());
         user.setSocialName(userDTO.getSocialName());
         user.setTel(userDTO.getTel());
+        user.setSetor(userDTO.getSetor());
+        user.setTeam(userDTO.getTeam());
+        user.setEntryDate(userDTO.getEntryDate());
+        user.setEmergencyTel(userDTO.getEmergencyTel());
+        user.setGender(userDTO.getGender());
+        user.setCoordinatorSetor(user.getCoordinatorSetor());
         return user;
     }
 }

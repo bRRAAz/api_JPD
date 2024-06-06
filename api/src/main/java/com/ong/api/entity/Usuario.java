@@ -13,27 +13,50 @@ public class Usuario {
     private String password;
     private String pronome;
     private String dateBirth;
+    @Column(unique = true)
     private String email;
     private String tel;
     private String emergencyTel;
     private String entryDate;
-    @ManyToOne
-    @JoinColumn(name = "team_id")
-    private Equipe team;
+    private String team;
     private int numberOfAction;
     private boolean setorMember;
-    @ManyToOne
-    @JoinColumn(name = "setor_id")
-    @JsonIgnoreProperties({"leader"})
-    private Setor setor;
+    private String setor;
     private boolean coordinator;
     private int late;
     private int miss;
+    private String gender;
+    private String coordinatorSetor;
 
-    public Usuario(Long id, String name, String socialName, String pronome, String dateBirth, String email, String tel, String emergencyTel, String entryDate, Equipe team, int numberOfAction, boolean setorMember, Setor setor, boolean coordinator) {
+    public String getCoordinatorSetor() {
+        return coordinatorSetor;
+    }
+
+    public void setCoordinatorSetor(String coordinatorSetor) {
+        this.coordinatorSetor = coordinatorSetor;
+    }
+
+    public boolean isSetorMember() {
+        return setorMember;
+    }
+
+    public boolean isCoordinator() {
+        return coordinator;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Usuario(Long id, String name, String socialName, String password, String pronome, String dateBirth, String email, String tel, String emergencyTel, String entryDate, String team, int numberOfAction, boolean setorMember, String setor, boolean coordinator, int late, int miss, String gender, String coordinatorSetor) {
         this.id = id;
         this.name = name;
         this.socialName = socialName;
+        this.password = password;
         this.pronome = pronome;
         this.dateBirth = dateBirth;
         this.email = email;
@@ -45,7 +68,12 @@ public class Usuario {
         this.setorMember = setorMember;
         this.setor = setor;
         this.coordinator = coordinator;
+        this.late = late;
+        this.miss = miss;
+        this.gender = gender;
+        this.coordinatorSetor = coordinatorSetor;
     }
+
     public Usuario(){
 
     }
@@ -55,16 +83,25 @@ public class Usuario {
         this.password = password;
     }
 
-    public Usuario(String email, String password, String name, String pronome, String dateBirth, String emergencyTel, String entryDate, String socialName, String tel) {
-        this.email = email;
-        this.password = password;
+    public Usuario(String name, String socialName, String password, String pronome, String dateBirth, String email, String tel, String emergencyTel, String entryDate, String team, int numberOfAction, boolean setorMember, String setor, boolean coordinator, int late, int miss, String gender, String coordinatorSetor) {
         this.name = name;
+        this.socialName = socialName;
+        this.password = password;
         this.pronome = pronome;
         this.dateBirth = dateBirth;
+        this.email = email;
+        this.tel = tel;
         this.emergencyTel = emergencyTel;
         this.entryDate = entryDate;
-        this.socialName = socialName;
-        this.tel = tel;
+        this.team = team;
+        this.numberOfAction = numberOfAction;
+        this.setorMember = setorMember;
+        this.setor = setor;
+        this.coordinator = coordinator;
+        this.late = late;
+        this.miss = miss;
+        this.gender = gender;
+        this.coordinatorSetor = coordinatorSetor;
     }
 
     public int getLate() {
@@ -154,11 +191,11 @@ public class Usuario {
         this.entryDate = entryDate;
     }
 
-    public Equipe getTeam() {
+    public String getTeam() {
         return team;
     }
 
-    public void setTeam(Equipe team) {
+    public void setTeam(String team) {
         this.team = team;
     }
 
@@ -178,11 +215,11 @@ public class Usuario {
         this.setorMember = setorMember;
     }
 
-    public Setor getSetor() {
+    public String getSetor() {
         return setor;
     }
 
-    public void setSetor(Setor setor) {
+    public void setSetor(String setor) {
         this.setor = setor;
     }
 
