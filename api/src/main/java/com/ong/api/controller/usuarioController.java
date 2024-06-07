@@ -29,10 +29,11 @@ public class usuarioController {
     @PostMapping
     public ResponseEntity<?> signUp(@RequestBody Usuario usuario){
 
-        if(usuario.getEmail()==null || usuario.getEmail() == ""|| usuario.getPassword() == null || usuario.getPassword() == ""){
-            return new ResponseEntity<>("Email ou senha vazio",HttpStatus.BAD_REQUEST);
+        if(usuario.getEmail()==null || usuario.getEmail() == ""){
+            return new ResponseEntity<>("Email vazio",HttpStatus.BAD_REQUEST);
         }
         CryptPassword crypt = new CryptPassword();
+        System.out.println(usuario.getPassword());
         String hashedPassword = crypt.CryptPassword(usuario.getPassword());
         Usuario user = new Usuario(usuario.getName(),usuario.getSocialName(),hashedPassword,usuario.getPronome(),usuario.getDateBirth(),usuario.getEmail(),usuario.getTel(),usuario.getEmergencyTel(),usuario.getEntryDate(),usuario.getTeam(),usuario.getNumberOfAction(),usuario.getSetorMember(),usuario.getSetor(),usuario.getCoordinator(), usuario.getLate(), usuario.getMiss(), usuario.getGender(), usuario.getCoordinatorSetor());
 
