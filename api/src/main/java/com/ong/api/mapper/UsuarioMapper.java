@@ -25,6 +25,7 @@ public class UsuarioMapper {
         userDTO.setEmergencyTel(user.getEmergencyTel());
         userDTO.setGender(user.getGender());
         userDTO.setCoordinatorSetor(user.getCoordinatorSetor());
+        userDTO.setDelete(user.getDelete());
         return userDTO;
     }
     public static Usuario toUsuario(UsuarioDTO userDTO){
@@ -46,7 +47,8 @@ public class UsuarioMapper {
         user.setEntryDate(userDTO.getEntryDate());
         user.setEmergencyTel(userDTO.getEmergencyTel());
         user.setGender(userDTO.getGender());
-        user.setCoordinatorSetor(user.getCoordinatorSetor());
+        user.setCoordinatorSetor(userDTO.getCoordinatorSetor());
+        user.setDelete(userDTO.getDelete());
         return user;
     }
 }

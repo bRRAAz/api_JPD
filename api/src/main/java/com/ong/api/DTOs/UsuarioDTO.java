@@ -19,6 +19,15 @@ public class UsuarioDTO {
     private int miss;
     private String gender;
     private String coordinatorSetor;
+    private  boolean delete;
+
+    public boolean getDelete() {
+        return delete;
+    }
+
+    public void setDelete(boolean delete) {
+        this.delete = delete;
+    }
 
     public String getCoordinatorSetor() {
         return coordinatorSetor;

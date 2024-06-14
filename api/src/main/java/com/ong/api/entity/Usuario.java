@@ -27,6 +27,15 @@ public class Usuario {
     private int miss;
     private String gender;
     private String coordinatorSetor;
+    private boolean delete = false;
+
+    public boolean getDelete() {
+        return delete;
+    }
+
+    public void setDelete(boolean delete) {
+        this.delete = delete;
+    }
 
     public String getCoordinatorSetor() {
         return coordinatorSetor;
@@ -238,4 +247,6 @@ public class Usuario {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 }
